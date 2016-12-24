@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Details"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/details_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:padding="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="left"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/movie_title" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Movie Date"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/movie_image"
+            android:layout_below="@id/movie_title" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/movie_image"
+            android:layout_below="@id/date"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Favourites"
+            android:paddingLeft="5dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="#ff4040"
+            android:layout_toRightOf="@+id/movie_image"
+            android:layout_below="@id/rating"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="overview"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/movie_image" />
+
+        <LinearLayout
+            android:id="@+id/trailers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_below="@+id/overview" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trailers"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/trailer_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_below="@+id/trailers">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reviews"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/review_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

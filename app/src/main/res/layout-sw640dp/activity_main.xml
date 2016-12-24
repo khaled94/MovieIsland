@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="orientation|keyboardHidden|screenSize"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/MainFragment"
+        tools:context="com.example.nbdell.movieisland.MainActivity"
+        android:name="com.example.nbdell.movieisland.MainActivityFragment"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout="@layout/fragment_main">
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/DetailsFragment"
+        tools:context=".MovieDetailsActivity"
+        android:name="com.example.nbdell.movieisland.MovieDetailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout="@layout/details_fragment" />
+
+</LinearLayout>
+
